@@ -209,6 +209,14 @@
     .kicker { margin: 0 0 10px; color: var(--terracotta-deep); font-weight: 700; }
     h2 { font-family: "Lora", serif; font-size: clamp(34px, 4.2vw, 54px); letter-spacing: -.035em; margin-bottom: 0; }
     .section-intro { color: var(--muted); font-size: 18px; max-width: 680px; margin: 0; }
+    .section-intro .inline-link {
+      color: var(--terracotta-deep);
+      font-weight: 700;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+    .section-intro .inline-link:hover { color: var(--ink); }
+    #disponibilites { scroll-margin-top: 24px; }
     .about-grid { display: grid; grid-template-columns: 320px 1fr; gap: 70px; align-items: start; }
     .portrait-card { position: sticky; top: 24px; }
     .portrait-wrap {
@@ -660,7 +668,7 @@
       <div class="shell">
         <div class="section-head contact-heading">
           <div><p class="kicker">Contact, agenda & estimation</p><h2>Préparons sa garde ensemble</h2></div>
-          <p class="section-intro">Consultez mes disponibilités, estimez le tarif puis envoyez-moi directement votre demande. Je vous répondrai rapidement pour confirmer les dates et organiser une première rencontre.</p>
+          <p class="section-intro">Consultez <a class="inline-link" href="#disponibilites">mes disponibilités</a>, estimez le tarif puis envoyez-moi directement votre demande. Je vous répondrai rapidement pour confirmer les dates et organiser une première rencontre.</p>
         </div>
 
         <div class="planning-grid">
@@ -706,12 +714,11 @@
                 <textarea name="message" rows="5" placeholder="Parlez-moi de votre compagnon, de ses habitudes et de ses besoins." required></textarea>
               </label>
               <button class="button" type="submit">Envoyer ma demande</button>
-              <p class="form-note">Votre demande est envoyée directement et je vous répondrai rapidement.</p>
               <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
             </form>
           </article>
 
-          <article class="planner-card calendar-card">
+          <article class="planner-card calendar-card" id="disponibilites">
             <div class="card-heading"><span class="card-number">02</span><div><h3>Mes disponibilités</h3><p>Cliquez sur une date disponible pour la reporter dans le formulaire.</p></div></div>
             <div class="calendar-toolbar">
               <button class="icon-button" type="button" id="prev-month" aria-label="Mois précédent">←</button>
